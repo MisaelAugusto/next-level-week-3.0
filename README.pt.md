@@ -21,13 +21,13 @@
 <h3 align="center">WEB</h3>
 
 <div align="center">
-  <img src="https://ik.imagekit.io/ocq8ayf2ug/happy-web_b7RrCmoqH.gif" alt="Happy web"/>
+  <img src="README/happy-web.gif" alt="Happy web"/>
 </div>
 
 <h3 align="center">MOBILE</h3>
 
 <div align="center">
-  <img src="https://ik.imagekit.io/ocq8ayf2ug/happy-mobile_jJmkvxd9s.gif" alt="Happy mobile"/>
+  <img src="README/happy-mobile.gif" alt="Happy mobile"/>
 </div>
 
 <h2 id="technologies">💻️ Tecnologias</h2>
