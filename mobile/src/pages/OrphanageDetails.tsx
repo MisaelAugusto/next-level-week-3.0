@@ -43,9 +43,18 @@ export default function OrphanageDetails() {
 
   useEffect(() => {
     api.get(`orphanages/${params.id}`).then(response => {
+      console.log(response.data);
+
       setOrphanage(response.data);
     });
   }, [params.id]);
+
+  const handleMapRoutes = useCallback(() => {
+    Linking.openURL(
+      `https://www.google.com/maps/dir/?api=1&destination=${orphanage?.latitude},${orphanage?.longitude}`
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [orphanage?.latitude, orphanage?.longitude]);
 
   if (!orphanage) {
     return (
@@ -54,12 +63,6 @@ export default function OrphanageDetails() {
       </View>
     );
   }
-
-  const handleMapRoutes = useCallback(() => {
-    Linking.openURL(
-      `https://www.google.com/maps/dir/?api=1&destination=${orphanage?.latitude},${orphanage?.longitude}`
-    );
-  }, [orphanage.latitude, orphanage.longitude]);
 
   return (
     <ScrollView style={styles.container}>
